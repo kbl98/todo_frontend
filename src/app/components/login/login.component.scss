@@ -1,0 +1,23 @@
+.column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-field{
+    height:100px;
+    width:450px;
+}
+
+#login-btn{
+    border-radius: 10px;
+    background-color: purple;
+    color: whitesmoke;
+    height:30px;
+    width:100px;
+    &:hover{
+        background-color:plum;
+        cursor: pointer;
+    }
+}
