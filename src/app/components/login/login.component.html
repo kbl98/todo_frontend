@@ -1,24 +1,41 @@
 <div class="column">
+  <h1>Login</h1>
 
-<h1>Login</h1>
-
-<form onsubmit="login()">
+  <form (ngSubmit)="login()">
     <div class="column">
-       
-
-    <mat-form-field class="login-field">
-        <mat-label>Input</mat-label>
-        <input matInput
-      name="username" id="username" placeholder="username" required>
-    </mat-form-field> 
-    <mat-form-field class="login-field">
+      <mat-form-field class="login-field">
+        <input
+        matInput
+        [(ngModel)]= "username"
+        name="username"
+        id="username"
+        placeholder="username"
+        required
+      />
+      </mat-form-field>
+      
+     
+      <mat-form-field class="login-field">
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'"  name="password" id="password" required>
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <input
+        matInput
+        [(ngModel)]= "password"
+        name="password"
+        id="password"
+        placeholder="password"
+        required
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
       </mat-form-field>
-    <button id="login-btn" type="submit">Login</button>
-</div>
-</form>
+      <button id="login-btn" type="submit">Login</button>
+    </div>
+  </form>
 </div>
