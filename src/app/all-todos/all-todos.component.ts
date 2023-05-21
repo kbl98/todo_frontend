@@ -22,11 +22,8 @@ async ngOnInit() {
 
 getTodolist(){
   const url = environment.baseUrl+'todos/';
-  let headers= new HttpHeaders()
-  headers=headers.set('Authorization','Token '+localStorage.getItem('token'))
-  console.log(url);
-  console.log(headers)
-  return lastValueFrom (this.http.get(url,{headers:headers}));
+  
+  return lastValueFrom (this.http.get(url));
 }
 }
 
